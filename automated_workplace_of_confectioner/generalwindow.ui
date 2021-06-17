@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GeneralWindow</class>
+ <widget class="QWidget" name="GeneralWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1971</width>
+    <height>1297</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(214, 182, 187);
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+QFrame{
+	background-color: rgb(244, 231, 231);
+	border-radius: 5px;
+}
+
+QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 31px;
+}
+
+QTabWidget{
+	background-color: #FBFBFB;
+}</string>
+  </property>
+  <widget class="QFrame" name="frame1">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>160</y>
+     <width>1571</width>
+     <height>761</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1561</width>
+      <height>761</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+	background-color: rgb(244, 231, 231);
+}
+
+QWidget::tab{
+	height: 60px;
+	width: 520px;
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::South</enum>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Виготовлена продукція</string>
+     </attribute>
+     <widget class="QTableView" name="tableViewCakes">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>201</y>
+        <width>1461</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxEmp1">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>321</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonFindEmp1">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(181, 128, 134);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Знайти</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit1">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>40</y>
+        <width>311</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonFindDate1">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(181, 128, 134);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Знайти</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Використана сировина</string>
+     </attribute>
+     <widget class="QTableView" name="tableViewRaw">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>200</y>
+        <width>1461</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonFindEmp2">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(181, 128, 134);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Знайти</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxEmp2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>321</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonFindDate2">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(181, 128, 134);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Знайти</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit2">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>40</y>
+        <width>311</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Збут</string>
+     </attribute>
+     <widget class="QTableView" name="tableView">
+      <property name="geometry">
+       <rect>
+        <x>45</x>
+        <y>201</y>
+        <width>1471</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxEmp3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>50</y>
+        <width>321</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEdit3">
+      <property name="geometry">
+       <rect>
+        <x>860</x>
+        <y>40</y>
+        <width>311</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonFindEmp3">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(181, 128, 134);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Знайти</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButtonFindDate3">
+      <property name="geometry">
+       <rect>
+        <x>1220</x>
+        <y>40</y>
+        <width>161</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(181, 128, 134);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Знайти</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="LogOut">
+   <property name="geometry">
+    <rect>
+     <x>1760</x>
+     <y>900</y>
+     <width>141</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Вихід</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="EditData">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>40</y>
+     <width>311</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Редагувати дані</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="AddDailyWork">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>40</y>
+     <width>301</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Додати денний звіт</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
