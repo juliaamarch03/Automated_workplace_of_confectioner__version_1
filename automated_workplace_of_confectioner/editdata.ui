@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EditData</class>
+ <widget class="QWidget" name="EditData">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1985</width>
+    <height>1044</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(214, 182, 187);
+	font-family: Roboto;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+QFrame{
+	background-color: rgb(244, 231, 231);
+	border-radius: 20px;
+}
+
+QTableView{
+	font-family: Roboto;
+	font-size: 20px;
+	font-weight: medium;
+	border-radius:0px;
+}
+</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>130</y>
+     <width>1601</width>
+     <height>761</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>1571</width>
+      <height>741</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+	background-color: rgb(244, 231, 231);
+	border-color: rgb(244, 231, 231);
+}
+
+QWidget::tab{
+	height: 60px;
+	width: 523px;
+	color: #575757;
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::South</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Випічка</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_AddCake">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Добавити запис</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_cake">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Видалити запис</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="table_cakes">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>40</y>
+        <width>651</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditCake">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>250</y>
+        <width>541</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;
+border-radius: 20px;
+border-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update_data_cake">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Змінити запис</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_IdCake">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>120</y>
+        <width>541</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;
+border-radius: 20px;
+border-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>70</y>
+        <width>261</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #575757;</string>
+      </property>
+      <property name="text">
+       <string>Код продукції</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>200</y>
+        <width>371</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #575757;</string>
+      </property>
+      <property name="text">
+       <string>Найменування продукції</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Сировина</string>
+     </attribute>
+     <widget class="QTableView" name="table_raw">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>40</y>
+        <width>651</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_raw">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Добавити запис</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_raw">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Видалити запис</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update_data_raw">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Змінити запис</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>70</y>
+        <width>251</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #575757;</string>
+      </property>
+      <property name="text">
+       <string>Код сировини</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>200</y>
+        <width>381</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #575757;</string>
+      </property>
+      <property name="text">
+       <string>Найменування сировини</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_IdRaw">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>120</y>
+        <width>541</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;
+border-radius: 20px;
+border-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditRaw">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>250</y>
+        <width>541</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;
+border-radius: 20px;
+border-color: #FCFCFC;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+     </property>
+     <attribute name="title">
+      <string>Магазини</string>
+     </attribute>
+     <widget class="QTableView" name="table_shops">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>40</y>
+        <width>651</width>
+        <height>611</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="update_data_shop">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Змінити запис</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_shop">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Видалити запис</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="add_shop">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>390</y>
+        <width>241</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Добавити запис</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>60</y>
+        <width>241</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #575757;</string>
+      </property>
+      <property name="text">
+       <string>Код магазину</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_IdShop">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>120</y>
+        <width>541</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;
+border-radius: 20px;
+border-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditShop">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>250</y>
+        <width>541</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FCFCFC;
+border-radius: 20px;
+border-color: #FCFCFC;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>200</y>
+        <width>331</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #575757;</string>
+      </property>
+      <property name="text">
+       <string>Найменування магазину</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="BackToGeneralWindow">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>40</y>
+     <width>281</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+   </property>
+   <property name="text">
+    <string>На головну</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

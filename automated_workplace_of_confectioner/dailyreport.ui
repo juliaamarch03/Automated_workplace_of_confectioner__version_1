@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DailyReport</class>
+ <widget class="QDialog" name="DailyReport">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2128</width>
+    <height>1294</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+	background-color: rgb(214, 182, 187);
+	font-family: Roboto;
+	font-size: 24px;
+    color: #575757;
+	font-weight: bold;
+}
+
+QFrame{
+	background-color: rgb(244, 231, 231);
+	border-radius: 5px;
+}
+
+QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}
+
+QTabWidget{
+	background-color: #FBFBFB;
+}
+QLineEdit{
+	background: #E7E7E7;
+	border-radius: 15px;
+	color: #575757;
+}</string>
+  </property>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>150</y>
+     <width>1601</width>
+     <height>731</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1601</width>
+      <height>731</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">*{
+	background-color: rgb(244, 231, 231);
+	border-color: rgb(244, 231, 231);
+}
+
+QWidget::tab{
+	height: 60px;
+	width: 533px;
+	color: #575757;
+}</string>
+    </property>
+    <property name="tabPosition">
+     <enum>QTabWidget::South</enum>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Сировина</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_Raw">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>50</y>
+        <width>781</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>280</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Дата</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEditDateR">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>280</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>№</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxQR">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>200</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Сировина</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_DelRaw">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>500</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Видалити запис</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBoxIdR">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>К-сть(кг)</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_AddRaw">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>500</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Додати запис</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>360</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Зміна</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxRaw">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>130</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxEmp1">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>350</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Збут</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_Shops">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>50</y>
+        <width>781</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>№</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_DelShop">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>540</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Видалити запис</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Магазин</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEditDateS">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>350</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBoxIdS">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>350</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Дата</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>430</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Зміна</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxQS">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>270</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_AddShop">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>540</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Додати запис</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>280</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>К-сть(кг)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Продукція</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxCakes2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>200</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxShops">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>130</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxEmp2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>430</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Продукція</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidgetCakes">
+      <property name="geometry">
+       <rect>
+        <x>775</x>
+        <y>50</y>
+        <width>781</width>
+        <height>541</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>70</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>№</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>140</y>
+        <width>171</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Продукція</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>210</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>К-сть(кг)</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>280</y>
+        <width>141</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Дата</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>360</y>
+        <width>151</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Зміна</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBoxIdC">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>70</y>
+        <width>311</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="doubleSpinBoxQC">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>200</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="dateEditDateC">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>280</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;
+border-radius: 15px;
+border: none;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_AddCake">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>500</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Додати запис</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_DelCake">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>500</y>
+        <width>251</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(128, 66, 77);
+	font-size:24px;
+	color: #FBFBFB;
+	border-radius: 20px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Видалити запис</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxCakes">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>133</y>
+        <width>301</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBoxEmp3">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>360</y>
+        <width>311</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: #fff;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>50</y>
+     <width>311</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>На головну</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
